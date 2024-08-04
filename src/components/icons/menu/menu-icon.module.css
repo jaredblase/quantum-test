@@ -1,0 +1,7 @@
+.menu {
+	@apply relative h-6 w-8 cursor-pointer;
+}
+
+.div {
+	@apply absolute h-[3px] w-full rounded-lg bg-white transition-transform duration-300;
+}
