@@ -27,7 +27,7 @@ function App() {
 					</div>
 					<div className="max-md:hidden">
 						<img
-							src="/building.avif"
+							src={import.meta.env.BASE_URL + 'building.avif'}
 							alt=""
 							className="absolute bottom-0 left-0 h-3/4 w-[42%] object-cover"
 						/>
@@ -53,7 +53,7 @@ function App() {
 			</section>
 			<section className="relative mt-4 max-md:pb-12 md:h-[75vh]">
 				<img
-					src="/boat.jpg"
+					src={import.meta.env.BASE_URL + 'boat.jpg'}
 					alt=""
 					className="absolute bottom-0 right-0 h-full w-[45%] object-cover max-lg:hidden"
 				/>

@@ -4,11 +4,11 @@ import { MenuIcon } from '../icons/menu'
 import { useState } from 'react'
 
 const links = [
-	{ href: '/', title: 'Quantum Pulse Consulting' },
-	{ href: '/about-us', title: 'About Us' },
-	{ href: '/experiences', title: 'Experiences' },
-	{ href: '/case-studies', title: 'Case Studies' },
-	{ href: '/contact-us', title: 'Contact Us' },
+	{ href: import.meta.env.BASE_URL, title: 'Quantum Pulse Consulting' },
+	{ href: import.meta.env.BASE_URL + 'about-us', title: 'About Us' },
+	{ href: import.meta.env.BASE_URL + 'experiences', title: 'Experiences' },
+	{ href: import.meta.env.BASE_URL + 'case-studies', title: 'Case Studies' },
+	{ href: import.meta.env.BASE_URL + 'contact-us', title: 'Contact Us' },
 ]
 
 export function Header() {
@@ -18,8 +18,12 @@ export function Header() {
 	return (
 		<header className="relative bg-[#040E19] text-white">
 			<div className="container flex h-20 items-center justify-between">
-				<Link to="/">
-					<img src="/logo.webp" alt="Quantum Pulse Logo" className="w-36" />
+				<Link to={import.meta.env.BASE_URL}>
+					<img
+						src={import.meta.env.BASE_URL + 'logo.webp'}
+						alt="Quantum Pulse Logo"
+						className="w-36"
+					/>
 				</Link>
 				<nav className="hidden gap-8 lg:flex">
 					{links.map((l) => (
